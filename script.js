@@ -94,30 +94,13 @@ const initializer = () => {
             showCompChoice.appendChild(cloner(userInput[0]));
           }
         }
-      }, 400);
 
-      // switch (compChoice) {
-      //   case "rock": {
-      //     showCompChoice.appendChild(cloner(userInput[2]));
-      //     break;
-      //   }
-      //   case "scissors": {
-      //     showCompChoice.appendChild(cloner(userInput[1]));
-      //     break;
-      //   }
-      //   case "paper": {
-      //     showCompChoice.appendChild(cloner(userInput[0]));
-      //   }
-      // }
-
-      //displays the comp Choice
-
-      compare(input.value, compChoice);
+        showCompChoice.classList.remove("invisible");
+        compare(input.value, compChoice);
+      }, 300);
     });
   });
 };
-
-console.log(getCompChoice() + " to see if ne diff");
 
 initializer();
 // INITIALISES EVERY FUNCTION and gets userinput
@@ -130,8 +113,10 @@ const revertShowHide = () => {
   inputSection.classList.remove("invisible");
   desSection.classList.add("invisible");
 
+  showResult.textContent = "";
   showUserChoice.innerHTML = "";
   showCompChoice.innerHTML = "";
+  showCompChoice.classList.add("invisible");
 };
 
 listen(playAgnBtn, revertShowHide);
