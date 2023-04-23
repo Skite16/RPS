@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      /* Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%) */
+    </style>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li class="head-flex"><h1>ROCK</h1></li>
+
+        <li class="head-flex">
+          <h1>PAPER</h1>
+        </li>
+
+        <li class="head-flex">
+          <h1>SCISSORS</h1>
+        </li>
+      </ul>
+
+      <div class="shiroi-container head-flex">
+        <span class="score-text"> SCORE </span>
+        <span class="score">00</span>
+      </div>
+    </header>
+
+    <section class="visible-section">
+      <img src="images/bg-triangle.svg" class="triangle-back" alt="" />
+
+      <button class="userInput paper" value="paper">
+        <img class="paper-img image" src="images/icon-paper.svg" alt="" />
+      </button>
+
+      <button class="userInput scissors" value="scissors">
+        <img class="scissors-img image" src="images/icon-scissors.svg" alt="" />
+      </button>
+
+      <button class="userInput rock" value="rock">
+        <img class="rock-img image" src="images/icon-rock.svg" alt="" />
+      </button>
+    </section>
+
+    <section class="decision-section invisible">
+      <div class="left desChild">
+        <span class="youPicked">YOU PICKED</span>
+        <div class="show-input"></div>
+      </div>
+      <div class="mid">
+        <h1 class="result-really"></h1>
+        <button class="playAgain">PLAY AGAIN</button>
+      </div>
+      <div class="right desChild">
+        <span class="youPicked">THE HOUSE PICKED</span>
+        <div class="show-compChoice"></div>
+      </div>
+    </section>
+
+    <section class="rules-section invisible">
+      <span>RULES</span>
+      <img class="rules-img" src="images/image-rules.svg" alt="" />
+      <img class="close-btn" src="images/icon-close.svg" alt="" />
+    </section>
+
+    <footer>
+      <div><button class="rules-btn">Rules</button></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
